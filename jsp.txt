@@ -1,0 +1,59 @@
+JSP:::
+
+
+		<% %>------>scriplet
+		<%= %>----->expression tag---->It will return result----><%=10+20%>
+		<%! %>----->declaration tag----> we declare variables,methods----><%!  int a=10;b=20; %>
+
+		*)directive provide the information the container at runtime.
+		
+		*)jasper container convert the jsp file to servlet.
+		
+		*)no need to configure web.xml,annotations.
+
+		*)no need to restart the server when we run code again.
+
+182415
+
+
+		*)Methods of JspPage interface------refer docx
+
+		*)request,response,out(jspwriter),session,config--------->inbuild object
+		
+		*)Servlet Config object---->created by container for every servlet
+			
+		               	       ---->we can store information in Servlet Config ,that is given in inial stage in web.xml as 
+						
+					<init-param>
+	
+			 				<param-name>NAME</param-name>
+													 
+							 <param-value>Anitha</param-value>
+											    
+					</init-param>
+		
+					->the code are written inside servlet in web.xml
+					
+					->ServletConfig config=getServeletConfig();--> using config object we can get parameter from web.xml. 
+		
+		*)servlet context object ---->	created by container for whole servlets.
+				
+					<context-param>
+	
+			 			<param-name>NAME</param-name>
+													 
+			 			<param-value>Anitha</param-value>
+											    
+					</context-param>
+
+					->the code are written outside servlet in web.xml
+					
+					->It can be accessed by any servlet.
+
+					->ServletContext context=getServletContext(); --> using context object we can get parameter from web.xml. 
+		
+	****)container duties(****
+		
+		-->instantiation of servlet
+		-->calling lifecycle methods on servlet object.
+		
